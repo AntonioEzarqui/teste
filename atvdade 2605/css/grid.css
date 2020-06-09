@@ -1,0 +1,80 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body div{
+    background-color: gray;
+    color: black;
+    border: solid black 2px;
+    margin: 7px;
+    font-size: 40px;
+    font-style:bold;
+    text-align: center;
+    vertical-align:middle;
+}
+
+body{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 200px auto;
+    grid-template-areas: 
+    'caixa1 caixa1 caixa1'
+    'caixa2 caixa2 caixa3'
+    'caixa2 caixa2 caixa4'
+    'caixa2 caixa2 caixa5'
+    'caixa6 caixa7 caixa8'
+    'caixa9 caixa9 caixa9';
+}
+
+.caixa1{
+    grid-area: caixa1;
+}
+
+.caixa2{
+    grid-area: caixa2;
+}
+
+.caixa3{
+    grid-area: caixa3;
+}
+
+.caixa4{
+    grid-area: caixa4;
+}
+
+.caixa5{
+    grid-area: caixa5;
+}
+
+.caixa6{
+    grid-area: caixa6;
+}
+
+.caixa7{
+    grid-area: caixa7;
+}
+
+.caixa8{
+    grid-area: caixa8;
+}
+
+.caixa9{
+    grid-area: caixa9;
+}
+
+@media(max-width: 530px){
+    body{
+    
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 3fr 1fr 2fr auto;
+        grid-template-areas: 
+        'caixa1 caixa1 caixa1'
+        'caixa2 caixa2 caixa2'
+        'caixa3 caixa4 caixa5'
+        'caixa6 caixa7 caixa8'
+        'caixa9 caixa9 caixa9';
+    }
+}
